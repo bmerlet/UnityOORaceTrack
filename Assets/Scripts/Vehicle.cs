@@ -26,8 +26,8 @@ public class Vehicle : MonoBehaviour
     protected virtual Quaternion cameraRotation => Quaternion.Euler(15, 0, 0);
 
     // Linear speed
-    protected virtual float speed => 10.0f;
-    protected virtual float turnSpeed => 30.0f;
+    protected virtual float speed => 30.0f;
+    protected virtual float turnSpeed => 60.0f;
 
     // Initialization
     void Start()
