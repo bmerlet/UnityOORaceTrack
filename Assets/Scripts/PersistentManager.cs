@@ -9,7 +9,7 @@ public class PersistentManager : MonoBehaviour
     static public PersistentManager Instance { get; private set; }
 
     // Vehicle type
-    public enum EVehicle {  Car, Truck, Bike };
+    public enum EVehicle { Car, Truck, Bike };
     public EVehicle Vehicle { get; private set; }
 
     // Construction
@@ -29,25 +29,10 @@ public class PersistentManager : MonoBehaviour
         }
     }
 
-    // Set vehicle type from buttons
-    public void SetVehicleCar()
-    {
-        StartScene(EVehicle.Car);
-    }
-
-    public void SetVehicleTruck()
-    {
-        StartScene(EVehicle.Truck);
-    }
-
-    public void SetVehicleBike()
-    {
-        StartScene(EVehicle.Bike);
-    }
-
     // Start game scene
-    private void StartScene(EVehicle vehicle)
+    public void StartScene(EVehicle vehicle)
     {
+        Debug.Log("Load scene 1 vehicle " + vehicle);
         Vehicle = vehicle;
         SceneManager.LoadScene(1);
     }

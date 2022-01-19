@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Truck : MonoBehaviour
+public class Truck : Vehicle
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,11 @@ public class Truck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ProcessCollision(other);
     }
 }

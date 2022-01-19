@@ -13,6 +13,11 @@ public class Car : Vehicle
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ProcessCollision(other);
     }
 }
