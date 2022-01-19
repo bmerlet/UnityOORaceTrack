@@ -45,9 +45,10 @@ public class PersistentManager : MonoBehaviour
         StartScene(EVehicle.Bike);
     }
 
+    // Start game scene
     private void StartScene(EVehicle vehicle)
     {
-        Vehicle = EVehicle.Bike;
+        Vehicle = vehicle;
         SceneManager.LoadScene(1);
     }
 }
